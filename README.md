@@ -13,23 +13,25 @@ rather than run loose on your machine.
 
 ## Install
 
-​```sh
-brew install cybersimplified-llc/tap/fst
-​```
-
-That taps this repository and installs the latest release. To tap explicitly
-first:
-
-​```sh
+```sh
+brew trust cybersimplified-llc/tap
 brew tap cybersimplified-llc/tap
 brew install fst
-​```
+```
+
+The `brew trust` step is **required once**. Homebrew 6.0+ treats third-party
+taps as untrusted by default and refuses to load their formulae until you trust
+them (a third-party formula is unsandboxed Ruby that runs on your machine). You
+only do it once per machine; official Homebrew taps are trusted already. Without
+it, `brew install` fails with `Refusing to load formula … from untrusted tap`.
+
+After trusting, `brew install cybersimplified-llc/tap/fst` works directly too.
 
 ## Upgrade
 
-​```sh
+```sh
 brew upgrade fst
-​```
+```
 
 `fst` installed from Homebrew is **managed by Homebrew** — the built-in
 `fst update` self-updater is disabled on this build and will point you back at
@@ -37,10 +39,10 @@ brew upgrade fst
 
 ## Uninstall
 
-​```sh
+```sh
 brew uninstall fst
 brew untap cybersimplified-llc/tap
-​```
+```
 
 ## Requirements
 
@@ -61,14 +63,14 @@ publishes a `SHA256SUMS` file alongside the artifacts.
 Homebrew already verifies the SHA-256 the formula pins on every install. To check
 by hand:
 
-​```sh
+```sh
 # Checksum — compare against the release's SHA256SUMS
 shasum -a 256 "$(brew --cache --formula fst)"
 
 # Code signature — should show the Developer ID Application authority
 codesign --verify --verbose "$(brew --prefix)/bin/fst"
 codesign -dv --verbose=4 "$(brew --prefix)/bin/fst" 2>&1 | grep Authority
-​```
+```
 
 ## Support
 

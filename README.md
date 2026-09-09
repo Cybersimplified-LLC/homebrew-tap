@@ -14,23 +14,30 @@ rather than run loose on your machine.
 ## Install
 
 ```sh
-brew trust cybersimplified-llc/tap
 brew tap cybersimplified-llc/tap
-brew install fst
+brew trust cybersimplified-llc/tap
+brew install forseti
 ```
 
-The `brew trust` step is **required once**. Homebrew 6.0+ treats third-party
-taps as untrusted by default and refuses to load their formulae until you trust
-them (a third-party formula is unsandboxed Ruby that runs on your machine). You
-only do it once per machine; official Homebrew taps are trusted already. Without
-it, `brew install` fails with `Refusing to load formula … from untrusted tap`.
+The Homebrew formula is named **`forseti`**; the command it installs is **`fst`**.
+The short name `fst` is already taken in homebrew-core by an unrelated tool
+(BurntSushi's finite-state-transducer utility), so this tap uses `forseti` to keep
+`brew install forseti` unambiguous — do **not** run `brew install fst`, which
+resolves to that unrelated core formula.
 
-After trusting, `brew install cybersimplified-llc/tap/fst` works directly too.
+The `brew trust` step is **required once**. Homebrew treats third-party taps as
+untrusted by default (since Homebrew 6.0.0) and refuses to load their formulae
+until you trust them (a third-party formula is unsandboxed Ruby that runs on your
+machine). You only do it once per machine; official Homebrew taps are trusted
+already. Without it, `brew install` fails with `Refusing to load formula … from
+untrusted tap`.
+
+After trusting, `brew install cybersimplified-llc/tap/forseti` works directly too.
 
 ## Upgrade
 
 ```sh
-brew upgrade fst
+brew upgrade forseti
 ```
 
 `fst` installed from Homebrew is **managed by Homebrew** — the built-in
@@ -40,7 +47,7 @@ brew upgrade fst
 ## Uninstall
 
 ```sh
-brew uninstall fst
+brew uninstall forseti
 brew untap cybersimplified-llc/tap
 ```
 
@@ -65,7 +72,7 @@ by hand:
 
 ```sh
 # Checksum — compare against the release's SHA256SUMS
-shasum -a 256 "$(brew --cache --formula fst)"
+shasum -a 256 "$(brew --cache --formula forseti)"
 
 # Code signature — should show the Developer ID Application authority
 codesign --verify --verbose "$(brew --prefix)/bin/fst"

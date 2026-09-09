@@ -1,4 +1,7 @@
-class Fst < Formula
+# Named `Forseti`/`forseti.rb`, not `fst`, to avoid the homebrew-core `fst`
+# formula (BurntSushi's transducer tool). The command this installs is `fst`
+# (see `bin.install` below); only the formula/tap name differs.
+class Forseti < Formula
   desc "Governed, network-isolated sandbox CLI for AI coding agents"
   homepage "https://github.com/Cybersimplified-LLC/homebrew-tap"
   # Proprietary: this tap ships packaging metadata only, not product source.
@@ -23,7 +26,7 @@ class Fst < Formula
 
       This Homebrew install is managed by `brew`; the built-in `fst update`
       self-updater is disabled on the community build and points back at
-      `brew upgrade fst`.
+      `brew upgrade forseti`.
     EOS
   end
 

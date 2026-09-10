@@ -5,9 +5,9 @@ class Forseti < Formula
   desc "Governed, network-isolated sandbox CLI for AI coding agents"
   homepage "https://github.com/Cybersimplified-LLC/homebrew-tap"
   # Proprietary: this tap ships packaging metadata only, not product source.
-  url "https://github.com/Cybersimplified-LLC/homebrew-tap/releases/download/stable-v0.200.0/forseti-stable-v0.200.0-aarch64-apple-darwin.tar.gz"
-  version "0.200.0"
-  sha256 "6434c19a5f476d8a9eb48c579985f8e8190631ca7c1b6fe014bbbddcc52a725e"
+  url "https://github.com/Cybersimplified-LLC/homebrew-tap/releases/download/stable-v0.201.0/forseti-stable-v0.201.0-aarch64-apple-darwin.tar.gz"
+  version "0.201.0"
+  sha256 "9c5603282f59493078aef9ea6ae4b8b4e2c2a119311a32f44e59acff7c48a0c7"
   license :cannot_represent
 
   # The release binary is aarch64-apple-darwin, Developer ID signed + notarized.

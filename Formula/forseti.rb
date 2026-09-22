@@ -18,9 +18,9 @@ class Forseti < Formula
   # Proprietary: this tap ships packaging metadata only, not product source.
   # The release workflow rewrites these three lines; the placeholders make an
   # un-rendered template fail the release's own guards rather than ship silently.
-  url "https://github.com/Cybersimplified-LLC/homebrew-tap/releases/download/stable-v0.299.0/forseti-stable-v0.299.0-aarch64-apple-darwin.tar.gz"
-  version "0.299.0"
-  sha256 "e32cdc03c46501e129c2ab874feb280fdd326aad94336c0fae6011e92e921d76"
+  url "https://github.com/Cybersimplified-LLC/homebrew-tap/releases/download/stable-v0.305.0/forseti-stable-v0.305.0-aarch64-apple-darwin.tar.gz"
+  version "0.305.0"
+  sha256 "92f3b48146a8ca7cecdb14a06bfd7272611d47d49f01328b3b9029c97c3c4912"
   license :cannot_represent
 
   # The release binary is aarch64-apple-darwin, Developer ID signed + notarized.
